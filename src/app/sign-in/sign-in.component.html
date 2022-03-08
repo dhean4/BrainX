@@ -1,0 +1,27 @@
+<div class="sign-in">
+    <div class="sign-in-img">
+        <img src="../../assets/frontpage.jpg">
+    </div>
+    <div class="sign-in-form">
+        <form [formGroup]="signInUser" (ngSubmit)="Login(signInUser.value)">
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com"  formControlName="email">
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                  </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter Password</mat-label>
+                    <input matInput placeholder="password" formControlName="password">
+                </mat-form-field>
+                <button class="submit-now" type="submit">login Now</button>
+            </div>
+         </form>
+         <div class="register-submit">
+            <p>Not a user ?</p>
+            <a routerLink="/SignUp">Register Now</a>
+       </div>  
+    </div>  
+</div>

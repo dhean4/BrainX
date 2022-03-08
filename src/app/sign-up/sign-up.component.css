@@ -1,0 +1,24 @@
+.sign-in{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    margin:7rem auto;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    /* background-color: #888; */
+}
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  .submit-now{
+      margin-top:10px;
+      display:flex;
+      padding:0.8rem 1.5rem;
+      background-color:blue;
+      color:#fff;
+      align-items:center;
+      border-radius: 10px;
+      cursor:pointer;
+      border:none;
+  }

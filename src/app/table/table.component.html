@@ -1,0 +1,72 @@
+<div class="container">
+    <div style="margin:1rem">
+        <mat-form-field appearance="standard">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+          </mat-form-field>
+          <mat-spinner *ngIf="isLoaded"></mat-spinner>
+
+                    <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource" matSort>
+              <!-- ID Column -->
+              <ng-container matColumnDef="ProductName">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> ProductName </th>
+                <td mat-cell *matCellDef="let row"> {{row[1].ProductName}} </td>
+              </ng-container>
+          
+              <!-- Progress Column -->
+              <ng-container matColumnDef="ProductCategories">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Categories </th>
+                <td mat-cell *matCellDef="let row"> {{row[1].ProductCategories}}</td>
+              </ng-container>
+          
+              <!-- Name Column -->
+              <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+                <td mat-cell *matCellDef="let row"> {{row[1].date |date}} </td>
+              </ng-container>
+          
+              <!-- Fruit Column -->
+              <ng-container matColumnDef="ProductStatus">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Fruit </th>
+                <td mat-cell *matCellDef="let row"> {{row[1].ProductStatus}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Price">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+                <td mat-cell *matCellDef="let row"> {{row[1].Price |currency}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Comments">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Comments </th>
+                <td mat-cell *matCellDef="let row"> {{row[1].Comments}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> action </th>
+                <td mat-cell *matCellDef="let row">
+                  <button mat-icon-button color="primary" (click)="openForm(row)">
+                    <mat-icon>edit</mat-icon> 
+                  </button>
+                  <button mat-icon-button color="warn" (click)="deleteContent(row)">
+                    <mat-icon>delete</mat-icon> 
+                   </button>
+ 
+                </td>
+              </ng-container>
+
+          
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          
+              <!-- Row shown when there is no matching data. -->
+              <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+              </tr>
+            </table>
+          
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+          </div>
+          
+    </div>
+</div>

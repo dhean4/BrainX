@@ -1,0 +1,43 @@
+{
+  "productList": [
+    {
+      "ProductName": "laptop",
+      "ProductCategories": "Pepper",
+      "date": "2022-03-02T23:00:00.000Z",
+      "ProductStatus": "new",
+      "Price": "450",
+      "Comments": "brand new latop",
+      "id": 10
+    },
+    {
+      "ProductName": "laptop",
+      "ProductCategories": "Pepper",
+      "date": "2022-03-02T23:00:00.000Z",
+      "ProductStatus": "new",
+      "Price": "450",
+      "Comments": "brand new latop",
+      "id": 10
+    },
+    {
+      "ProductName": "laptop",
+      "ProductCategories": "Pepper",
+      "date": "2022-03-02T23:00:00.000Z",
+      "ProductStatus": "new",
+      "Price": "450",
+      "Comments": "brand new latop",
+      "id": 10
+    }
+
+
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

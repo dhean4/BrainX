@@ -1,0 +1,23 @@
+<div class="sign-in">
+    <form [formGroup]="LoginUser" (ngSubmit)="submit(LoginUser.value)">
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com"  formControlName="email">
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Password</mat-label>
+                <input matInput placeholder="password" formControlName="password">
+            </mat-form-field>
+    
+        </div>
+
+      <div>
+          <button class="submit-now" type="submit">sign-up</button>
+     </div>  
+     </form>
+      
+</div>

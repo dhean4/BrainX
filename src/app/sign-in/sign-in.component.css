@@ -1,0 +1,50 @@
+.sign-in{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    align-content:center;
+    overflow:hidden !important;
+    box-sizing: border-box;
+}
+.sign-in-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 700px;
+}
+.sign-in-img img{
+    width: 100%;
+    height:100vh;
+    background-size: cover;
+}
+.sign-in-form{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    margin:7rem auto;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+.register-submit{
+    display:flex;
+    margin:8px 12px;
+    justify-content:space-between;
+}
+.register-submit a{
+    margin-left:2rem;
+
+    list-style:none;
+    cursor:pointer;
+    text-decoration: none;
+}
+.submit-now{
+    display:flex;
+    margin:5px auto;
+    padding:0.8rem 1.5rem;
+    background-color:blue;
+    color:#fff;
+    align-items:center;
+    border-radius: 10px;
+    cursor:pointer;
+    border:none;
+}
